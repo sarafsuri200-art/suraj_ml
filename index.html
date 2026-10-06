@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Result Prediction</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="countainer">
+    <h1>Student Result Prediction</h1>
+    <p>Naive Bayes + Flask</p>
+
+    <form action="/predict" method="POST">
+
+        <label>Study Hours</label>
+        <input type="number" name="study_hours"
+               step="0.1" required>
+
+        <label>Attendance (%)</label>
+        <input type="number" name="attendance"
+               min="0" max="100" required>
+
+        <label>Previous Marks</label>
+        <input type="number" name="previous_marks"
+               min="0" max="100" required>
+
+        <button type="submit">Predict Result</button>
+    </form>
+    </div>
+
+</body>
+</html>
